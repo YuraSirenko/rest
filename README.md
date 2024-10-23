@@ -1,1 +1,1 @@
-Applyed-Programing-Lab3
+Applied-Programing-Lab3
