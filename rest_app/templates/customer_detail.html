@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <title>Customer {{ customer.id }}</title>
+    <style>
+        body {
+            font-size: 20px;
+            line-height: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <h1> {{ customer.first_name }} {{ customer.last_name }}</h1>
+    <p>{{ customer.birth_date }} birth date.</p>
+    <p><b>Phone:</b>  {{ customer.phone }}</p>
+    <p><b>Sale:</b> {{ customer.sale.sale_type }}</p>
+</body>
