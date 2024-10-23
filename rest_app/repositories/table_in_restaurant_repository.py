@@ -1,20 +1,24 @@
 from rest_app.models import TableInRestaurant
 from rest_app.repositories.base_repository import BaseRepository
-from django.shortcuts import get_object_or_404
 
-class CustomerRepository(BaseRepository):
+class TableInRestaurantRepository(BaseRepository):
     def get_all(self):
         return TableInRestaurant.objects.all()
 
     def get_by_id(self, id):
-        return get_object_or_404(TableInRestaurant, id=id)
+        return TableInRestaurant.objects.get(id=id)
 
-    def add(self, table_in_restaurant):
-        table_in_restaurant.save()
-        return table_in_restaurant
+    def add(self, table):
+        table.save()
+        return table
 
-    def update(self, entity):
-        pass
+    def update(self, id, updated_data):
+        table = self.get_by_id(id)
+        for key, value in updated_data.items():
+            setattr(table, key, value)
+        table.save()
+        return table
 
     def delete(self, id):
-        pass
+        table = self.get_by_id(id)
+        table.delete()

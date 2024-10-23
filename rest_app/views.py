@@ -10,13 +10,9 @@ from .forms import WaiterForm
 
 from .repositories.order_repository import OrderRepository
 from .forms import OrderForm
-
 customer_repository = CustomerRepository()
-
 waiter_repository = WaiterRepository()
-
 order_repository = OrderRepository()
-
 def customer_all(request):
     customers = customer_repository.get_all()
     return render(request, 'customer_all.html', {'customers': customers})
@@ -32,7 +28,6 @@ def customer_add(request):
     else:
         form = CustomerForm()
     return render(request, 'customer_add.html', {'form': form})
-
 def waiter_all(request):
     waiters = waiter_repository.get_all()
     return render(request, 'waiter_all.html', {'waiters': waiters})
@@ -48,7 +43,6 @@ def waiter_add(request):
     else:
         form = WaiterForm()
     return render(request, 'waiter_add.html', {'form': form})
-
 def order_all(request):
     orders = order_repository.get_all()
     for order in orders:
