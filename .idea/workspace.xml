@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1145fec3-fd83-4c2d-8d85-3e13a829292b" name="Changes" comment="Initial Commit | Base lab3 created" />
+    <list default="true" id="1145fec3-fd83-4c2d-8d85-3e13a829292b" name="Changes" comment="Initial Commit | Base lab3 created">
+      <change afterPath="$PROJECT_DIR$/rest_app/facade.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rest_app/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest_app/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,18 +31,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "YuraSirenko"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;YuraSirenko&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/YuraSirenko/rest",
-    "accountId": "676de5e0-51dd-441d-82d3-d4ee3e2ae0b4"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/YuraSirenko/rest&quot;,
+    &quot;accountId&quot;: &quot;676de5e0-51dd-441d-82d3-d4ee3e2ae0b4&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -43,7 +50,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2nU4yYTq7ar5HGSKMk0o0nCuMzJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -54,7 +63,7 @@
     "Django Server.rest.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "part1",
+    "git-widget-placeholder": "part2",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Coding/semester3/ApliedPrograming/web/rest",
     "node.js.detected.package.eslint": "true",
@@ -79,7 +88,6 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -122,6 +130,7 @@
       <workItem from="1729681399931" duration="1367000" />
       <workItem from="1729707112281" duration="6803000" />
       <workItem from="1729716923829" duration="1394000" />
+      <workItem from="1729720441229" duration="7225000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit | Base lab3 created">
       <option name="closed" value="true" />
