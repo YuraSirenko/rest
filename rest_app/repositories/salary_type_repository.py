@@ -8,17 +8,6 @@ class SalaryTypeRepository(BaseRepository):
     def get_by_id(self, id):
         return SalaryType.objects.get(id=id)
 
-    def add(self, salary_type):
-        salary_type.save()
-        return salary_type
-
-    def update(self, id, updated_data):
-        salary_type = self.get_by_id(id)
-        for key, value in updated_data.items():
-            setattr(salary_type, key, value)
-        salary_type.save()
-        return salary_type
-
     def delete(self, id):
         salary_type = self.get_by_id(id)
         salary_type.delete()

@@ -10,13 +10,5 @@ class BaseRepository(ABC):
         pass
 
     @abstractmethod
-    def add(self, entity):
-        pass
-
-    @abstractmethod
-    def update(self, id, updated_data):
-        pass
-
-    @abstractmethod
     def delete(self, id):
         pass
