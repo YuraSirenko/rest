@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <title>Waiter {{ waiter.id }}</title>
+    <style>
+        body {
+            font-size: 20px;
+            line-height: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <h1> {{ waiter.first_name }} {{ waiter.last_name }}</h1>
+    <p>{{ waiter.birth_date }} birth date.</p>
+    <p>{{ waiter.hire_date }} hire date.</p>
+    <p><b>Phone:</b>  {{ waiter.phone }}</p>
+    <p><b>Salary type:</b> {{ waiter.salary_type.fixed }}$, {{ waiter.salary_type.percent}}%</p>
+</body>
