@@ -1,0 +1,11 @@
+<head>
+    <title>Order Form</title>
+</head>
+<body>
+    <h2>Order Form</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</body>
