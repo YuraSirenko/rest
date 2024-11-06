@@ -1,0 +1,27 @@
+<!-- templates/passenger_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passenger Detail</title>
+</head>
+<body>
+    <h1>Passenger Detail</h1>
+    <p>ID: {{ passenger.id }}</p>
+    <p>Name: {{ passenger.name }}</p>
+    <p>Email: {{ passenger.email }}</p>
+    <p>Passport Number: {{ passenger.passport_number }}</p>
+    <h2>Update Passenger</h2>
+    <form action="{% url 'rest_app_3_template:passenger-detail' passenger.id %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" value="{{ passenger.name }}">
+        <input type="email" name="email" value="{{ passenger.email }}">
+        <input type="text" name="passport_number" value="{{ passenger.passport_number }}">
+        <button type="submit">Update</button>
+    </form>
+    <h2>Delete Passenger</h2>
+    <form action="{% url 'rest_app_3_template:passenger-delete' passenger.id %}" method="post" onsubmit="return confirm('Are you sure you want to delete this passenger?');">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flights List</title>
+</head>
+<body>
+    <h1>Flights List</h1>
+    <ul>
+        {% for flight in flights %}
+            <li><a href="{% url 'rest_app_3_template:flight-detail' flight.id %}">{{ flight.flight_number }}</a></li>
+        {% endfor %}
+    </ul>
+    <h2>Create Flight</h2>
+    <form action="{% url 'rest_app_3_template:flight-list' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="flight_number" placeholder="Flight Number">
+        <input type="datetime-local" name="departure_time" placeholder="Departure Time">
+        <input type="datetime-local" name="arrival_time" placeholder="Arrival Time">
+        <input type="text" name="airplane" placeholder="Airplane ID">
+        <input type="text" name="route" placeholder="Route ID">
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>

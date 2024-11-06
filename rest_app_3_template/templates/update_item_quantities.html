@@ -1,0 +1,32 @@
+<head>
+    <title>Update Item Quantities</title>
+</head>
+<body>
+    <h2>Update Item Quantities for Order {{ order.id }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ formset.management_form }}
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Actions</th>
+            </tr>
+            {% for form in formset %}
+                <tr>
+                    <td>{{ form.item }}</td>
+                    <td>{{ form.quantity }}</td>
+                    <td>
+                        {% if form.initial.id %}
+                            <form method="post" action="{% url 'rest_app_3_template:delete_item' order.id form.initial.id %}">
+                                {% csrf_token %}
+                                <button type="submit">Delete</button>
+                            </form>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <button type="submit">Update Quantities</button>
+    </form>
+</body>

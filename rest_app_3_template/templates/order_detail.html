@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Order {{ order.id }}</title>
+    <style>
+        body {
+            font-size: 20px;
+            line-height: 0.5;
+        }
+        ul li {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://127.0.0.1:8000/rest_app_3_template/order_all/"><</a>
+    <a href="http://127.0.0.1:8000/rest_app_3_template/order/update/{{ order.id }}">Update</a>
+    <h1> Order id: {{ order.id }} | Table : {{ order.table.id }}</h1>
+    <p> Name of customer is {{ order.customer.first_name }} with {{ order.number_of_customers }} customers </p>
+    <p> Total = {{ order.total_sum }}</p>
+    <p> {{ order.payment_method.payment_type }}</p>
+    <p><b> Event duration:</b> {{ order.event_started }} - {{ order.event_ended }}</p>
+    <h2>Order Items</h2>
+    <ul>
+        {% for item in order.items_list %}
+            <li>{{ item.name }} - Quantity: {{ item.quantity }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'rest_app_3_template:update_item_quantities' order.id %}">Update Item Quantities</a>
+    <h2>Order Waiters</h2>
+    <ul>
+        {% for waiter in order.waiters_list %}
+            <li>{{ waiter.first_name }} {{ waiter.last_name }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'rest_app_3_template:update_waiters' order.id %}">Manage Waiters</a>
+    <form method="post" action="{% url 'rest_app_3_template:order_delete' order.id %}">
+        {% csrf_token %}
+        <button type="submit">Delete Order</button>
+    </form>
+</body>

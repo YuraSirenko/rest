@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_app',
+    'rest_app_2',
+    'rest_app_3_template',
     'rest_framework',
 ]
 REST_FRAMEWORK = {
